@@ -1,0 +1,17 @@
+<div class="course">
+    <div class="row">
+        <div class="col-md-12">
+
+            <ng-container *ngIf="(course$|async)as course">
+                <h2>
+                    {{course.description}}
+                </h2>
+
+                <img [src]="course.iconUrl" [alt]="course.description">
+
+
+
+            </ng-container>
+        </div>
+    </div>
+</div>

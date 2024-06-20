@@ -1,0 +1,17 @@
+<mat-card class="mb-4  mat-elevation-z7">
+    <mat-card-header>
+        <mat-card-title>
+            <mat-icon class="fa-2x">library_books</mat-icon>
+            {{getcourse.description}}
+        </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="getcourse.iconUrl" [alt]="getcourse.description" [title]="getcourse.description">
+    <mat-card-content>
+        {{getcourse.longDescription}}
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" [routerLink]="['/course',getcourse.id]">View course</button>
+        <button mat-raised-button color="accent" class="float-right" (click)="onedit()">Edit course</button>
+    </mat-card-actions>
+
+</mat-card>
